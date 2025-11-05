@@ -1,0 +1,60 @@
+{
+  "network.0.weight": {
+    "shape": [
+      40,
+      2
+    ],
+    "original_params": 80,
+    "cluster_centers": [
+      0.13243545591831207,
+      0.29980090260505676,
+      0.4864394962787628
+    ],
+    "compressed_params": 3,
+    "compression_ratio": 96.25
+  },
+  "network.2.weight": {
+    "shape": [
+      40,
+      40
+    ],
+    "original_params": 1600,
+    "cluster_centers": [
+      0.03198936581611633,
+      0.26492002606391907,
+      0.4179563820362091,
+      0.6154277920722961
+    ],
+    "compressed_params": 4,
+    "compression_ratio": 99.75
+  },
+  "network.4.weight": {
+    "shape": [
+      40,
+      40
+    ],
+    "original_params": 1600,
+    "cluster_centers": [
+      0.06805439293384552,
+      0.233284130692482,
+      0.43053072690963745,
+      0.5975790619850159
+    ],
+    "compressed_params": 4,
+    "compression_ratio": 99.75
+  },
+  "network.6.weight": {
+    "shape": [
+      2,
+      40
+    ],
+    "original_params": 80,
+    "cluster_centers": [
+      0.06513965129852295,
+      0.27055004239082336,
+      0.4241856038570404
+    ],
+    "compressed_params": 3,
+    "compression_ratio": 96.25
+  }
+}

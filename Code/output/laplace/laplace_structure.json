@@ -1,0 +1,129 @@
+{
+  "layers": [
+    {
+      "index": 0,
+      "type": "psi_plus_minus",
+      "name": "layer1",
+      "fc1_2": {
+        "weight_shape": [
+          20,
+          1
+        ],
+        "weight_stats": {
+          "mean": -0.10494764894247055,
+          "std": 0.5813146233558655,
+          "min": -0.9470999240875244,
+          "max": 0.9784218072891235,
+          "l2_norm": 2.641744375228882
+        }
+      },
+      "fc1_4": {
+        "weight_shape": [
+          20,
+          1
+        ],
+        "weight_stats": {
+          "mean": -0.1038035899400711,
+          "std": 0.43942946195602417,
+          "min": -0.7789151668548584,
+          "max": 0.6932111978530884,
+          "l2_norm": 2.0192742347717285
+        }
+      },
+      "structure": "tanh(fc1_2(x) +/- fc1_4(y))",
+      "output_dim": 40
+    },
+    {
+      "index": 1,
+      "type": "psi_symmetric",
+      "name": "layer2",
+      "fc2_2": {
+        "weight_shape": [
+          20,
+          20
+        ],
+        "weight_stats": {
+          "mean": -0.013491464778780937,
+          "std": 0.1301696002483368,
+          "min": -0.22351107001304626,
+          "max": 0.22337186336517334,
+          "l2_norm": 2.617337942123413
+        }
+      },
+      "fc2_4": {
+        "weight_shape": [
+          20,
+          20
+        ],
+        "weight_stats": {
+          "mean": 0.002293565310537815,
+          "std": 0.13314802944660187,
+          "min": -0.22354756295681,
+          "max": 0.22334617376327515,
+          "l2_norm": 2.663355827331543
+        }
+      },
+      "structure": "tanh(fc2_2(u1_3) + fc2_4(u1_4)), tanh(fc2_4(u1_3) + fc2_2(u1_4))",
+      "output_dim": 40
+    },
+    {
+      "index": 2,
+      "type": "psi_combination",
+      "name": "layer3",
+      "fc3_2": {
+        "weight_shape": [
+          40,
+          20
+        ],
+        "weight_stats": {
+          "mean": 0.00264172675088048,
+          "std": 0.13220670819282532,
+          "min": -0.22273871302604675,
+          "max": 0.2227119505405426,
+          "l2_norm": 3.740117073059082
+        }
+      },
+      "structure": "tanh(fc3_2(u2_3) + fc3_2(u2_4))",
+      "output_dim": 40
+    },
+    {
+      "index": 3,
+      "type": "linear",
+      "name": "output",
+      "weight_shape": [
+        1,
+        40
+      ],
+      "has_bias": true,
+      "weight_stats": {
+        "mean": 0.01008634828031063,
+        "std": 0.09847419708967209,
+        "min": -0.14996251463890076,
+        "max": 0.1511767953634262,
+        "l2_norm": 0.6260640025138855
+      },
+      "output_dim": 1
+    }
+  ],
+  "connections": [],
+  "input_dim": 2,
+  "output_dim": 1,
+  "activation": "tanh",
+  "special_structures": {
+    "even_function": {
+      "description": "Output layer has bias to allow even function property",
+      "equation": "u = fc4_1(u3_2)"
+    }
+  },
+  "metadata": {
+    "model_type": "PsiNN_laplace",
+    "total_layers": 4,
+    "input_dim": 2,
+    "output_dim": 1,
+    "activation": "tanh",
+    "has_special_structures": true,
+    "special_structure_types": [
+      "even_function"
+    ]
+  }
+}

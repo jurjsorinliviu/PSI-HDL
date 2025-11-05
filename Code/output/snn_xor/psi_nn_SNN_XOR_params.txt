@@ -1,0 +1,16 @@
+// Weight parameters for Verilog-A module
+// Model: SNN_XOR
+
+// snn_layers_0_weight: shape (2, 2)
+.snn_layers_0_weight[0][0](-1.643253e+00)
+.snn_layers_0_weight[0][1](1.396324e+00)
+.snn_layers_0_weight[1][0](1.497710e+00)
+.snn_layers_0_weight[1][1](-1.741644e+00)
+// snn_layers_0_bias: shape (2,)
+.snn_layers_0_bias[0](7.917837e-03)
+.snn_layers_0_bias[1](-6.046492e-04)
+// snn_output_layer_weight: shape (1, 2)
+.snn_output_layer_weight[0][0](1.949330e+00)
+.snn_output_layer_weight[0][1](1.837617e+00)
+// snn_output_layer_bias: shape (1,)
+.snn_output_layer_bias[0](5.327656e-02)

@@ -1,0 +1,3 @@
+Model,MAE (A),RMSE (A),Parameters,Training Time (s),Improvement
+VTEAM Baseline,1.531e-04,3.110e-04,8,0.0,-
+Ψ-HDL PINN,1.328e-04,1.931e-04,3482,180.0,+13.2%

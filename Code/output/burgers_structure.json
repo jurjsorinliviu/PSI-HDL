@@ -1,0 +1,167 @@
+{
+  "layers": [
+    {
+      "index": 0,
+      "type": "psi_plus_minus",
+      "name": "layer1",
+      "fc1_1": {
+        "weight_shape": [
+          20,
+          1
+        ],
+        "has_bias": true,
+        "weight_stats": {
+          "mean": -0.14704547822475433,
+          "std": 0.6714046597480774,
+          "min": -0.9871366024017334,
+          "max": 0.9999487400054932,
+          "l2_norm": 3.0737812519073486
+        }
+      },
+      "fc1_3": {
+        "weight_shape": [
+          20,
+          1
+        ],
+        "has_bias": false,
+        "weight_stats": {
+          "mean": -0.12584933638572693,
+          "std": 0.5316230654716492,
+          "min": -0.9179847240447998,
+          "max": 0.9243582487106323,
+          "l2_norm": 2.4431991577148438
+        }
+      },
+      "structure": "tanh(fc1_1(x) +/- fc1_3(y))",
+      "output_dim": 40
+    },
+    {
+      "index": 1,
+      "type": "psi_symmetric",
+      "name": "layer2",
+      "fc2_1": {
+        "weight_shape": [
+          20,
+          20
+        ],
+        "weight_stats": {
+          "mean": -0.003066055243834853,
+          "std": 0.13012894988059998,
+          "min": -0.2235887497663498,
+          "max": 0.2225891351699829,
+          "l2_norm": 2.6033012866973877
+        }
+      },
+      "fc2_2": {
+        "weight_shape": [
+          20,
+          20
+        ],
+        "weight_stats": {
+          "mean": 0.008337683975696564,
+          "std": 0.12979760766029358,
+          "min": -0.22314585745334625,
+          "max": 0.2226022481918335,
+          "l2_norm": 2.6013026237487793
+        }
+      },
+      "fc2_3": {
+        "weight_shape": [
+          20,
+          20
+        ],
+        "weight_stats": {
+          "mean": 0.0013801036402583122,
+          "std": 0.13325031101703644,
+          "min": -0.22333775460720062,
+          "max": 0.22343957424163818,
+          "l2_norm": 2.665149450302124
+        }
+      },
+      "structure": "tanh(fc2_1(u1_1) + fc2_3(u1_2)), tanh(fc2_3(u1_1) + fc2_1(u1_2)), tanh(fc2_2(u1_1) - fc2_2(u1_2))",
+      "output_dim": 60
+    },
+    {
+      "index": 2,
+      "type": "psi_combination",
+      "name": "layer3",
+      "fc3_1": {
+        "weight_shape": [
+          40,
+          20
+        ],
+        "weight_stats": {
+          "mean": -0.00608915276825428,
+          "std": 0.13016751408576965,
+          "min": -0.22351893782615662,
+          "max": 0.22304561734199524,
+          "l2_norm": 3.6857192516326904
+        }
+      },
+      "fc3_2": {
+        "weight_shape": [
+          40,
+          20
+        ],
+        "weight_stats": {
+          "mean": -0.004885195288807154,
+          "std": 0.12794280052185059,
+          "min": -0.22272637486457825,
+          "max": 0.22274479269981384,
+          "l2_norm": 3.621405839920044
+        }
+      },
+      "structure": "tanh(fc3_1(u2_1) - fc3_1(u2_2) + fc3_2(u2_3))",
+      "output_dim": 40
+    },
+    {
+      "index": 3,
+      "type": "linear",
+      "name": "output",
+      "weight_shape": [
+        1,
+        40
+      ],
+      "has_bias": false,
+      "weight_stats": {
+        "mean": 0.02121216431260109,
+        "std": 0.10064827650785446,
+        "min": -0.15352599322795868,
+        "max": 0.15372271835803986,
+        "l2_norm": 0.650539219379425
+      },
+      "output_dim": 1
+    }
+  ],
+  "connections": [],
+  "input_dim": 2,
+  "output_dim": 1,
+  "activation": "tanh",
+  "special_structures": {
+    "plus_minus_input": {
+      "description": "Input layer uses +/-W structure for symmetry",
+      "equation": "u1_1 = tanh(fc1_1(x) + fc1_3(y)), u1_2 = tanh(fc1_1(x) - fc1_3(y))"
+    },
+    "symmetric_interchange": {
+      "description": "Layer 2 uses weight sharing with symmetric interchange",
+      "equation": "u2_1 = tanh(fc2_1(u1_1) + fc2_3(u1_2)), u2_2 = tanh(fc2_3(u1_1) + fc2_1(u1_2))"
+    },
+    "odd_function": {
+      "description": "Output layer has no bias to preserve odd function property",
+      "equation": "u = fc4_1(u3_1)"
+    }
+  },
+  "metadata": {
+    "model_type": "PsiNN_burgers",
+    "total_layers": 4,
+    "input_dim": 2,
+    "output_dim": 1,
+    "activation": "tanh",
+    "has_special_structures": true,
+    "special_structure_types": [
+      "plus_minus_input",
+      "symmetric_interchange",
+      "odd_function"
+    ]
+  }
+}
