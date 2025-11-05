@@ -6,9 +6,9 @@
     ],
     "original_params": 80,
     "cluster_centers": [
-      0.13243545591831207,
-      0.29980090260505676,
-      0.4864394962787628
+      0.0896533876657486,
+      0.24469849467277527,
+      0.5200738310813904
     ],
     "compressed_params": 3,
     "compression_ratio": 96.25
@@ -20,13 +20,12 @@
     ],
     "original_params": 1600,
     "cluster_centers": [
-      0.03198936581611633,
-      0.26492002606391907,
-      0.4179563820362091,
-      0.6154277920722961
+      0.05537926033139229,
+      0.3321485221385956,
+      0.5306145548820496
     ],
-    "compressed_params": 4,
-    "compression_ratio": 99.75
+    "compressed_params": 3,
+    "compression_ratio": 99.8125
   },
   "network.4.weight": {
     "shape": [
@@ -35,13 +34,12 @@
     ],
     "original_params": 1600,
     "cluster_centers": [
-      0.06805439293384552,
-      0.233284130692482,
-      0.43053072690963745,
-      0.5975790619850159
+      0.0597647950053215,
+      0.221743643283844,
+      0.4718168079853058
     ],
-    "compressed_params": 4,
-    "compression_ratio": 99.75
+    "compressed_params": 3,
+    "compression_ratio": 99.8125
   },
   "network.6.weight": {
     "shape": [
@@ -50,11 +48,10 @@
     ],
     "original_params": 80,
     "cluster_centers": [
-      0.06513965129852295,
-      0.27055004239082336,
-      0.4241856038570404
+      0.1500542014837265,
+      0.4115300476551056
     ],
-    "compressed_params": 3,
-    "compression_ratio": 96.25
+    "compressed_params": 2,
+    "compression_ratio": 97.5
   }
 }
