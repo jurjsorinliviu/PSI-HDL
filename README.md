@@ -1,4 +1,4 @@
-- [ ] # Ψ-HDL: Physics Structured-Informed Neural Networks for Hardware Description Language Generation
+# Ψ-HDL: Physics Structured-Informed Neural Networks for Hardware Description Language Generation
 
   > 🔬 **Soon to be submitted to IEEE Access** | 🚀 **Extends Ψ-NN to HDL Generation** | ⚡ **99.6% Parameter Reduction**
 
