@@ -254,6 +254,46 @@
 
   ---
 
+  ### Experiment 4: Ablation Study on Clustering Threshold ε
+
+  ```bash
+  python Code/additional_experiments.py
+  ```
+
+  **Results**:
+
+  - Tests 6 epsilon values: 0.01, 0.05, 0.1, 0.15, 0.2, 0.3
+  - **Optimal**: ε = 0.3 achieves 98.6% compression (3360→46 parameters)
+  - MAE remains acceptable across all tested values
+  - Validates hyperparameter robustness within range ε ∈ [0.05, 0.3]
+
+  **Figures**:
+  - `Code/output/additional_experiments/epsilon_ablation/epsilon_ablation_plots.png`
+  - `Code/output/additional_experiments/epsilon_ablation/epsilon_ablation_results.csv`
+
+  ---
+
+  ### Experiment 5: Scalability Validation (3×3 Pixel SNN)
+
+  ```bash
+  python Code/additional_experiments.py
+  ```
+
+  **Results**:
+
+  - 9→4→2 architecture (50 parameters, 2× larger than XOR)
+  - Binary classification: vertical vs horizontal line patterns
+  - **Accuracy**: 100% on classification task
+  - **Compression**: 50% (50→22 parameters)
+  - Demonstrates scaling beyond minimal examples
+
+  **Outputs**:
+  - `Code/output/additional_experiments/larger_snn/snn_3x3_examples.png`
+  - `Code/output/additional_experiments/larger_snn/snn_3x3_classifier.va`
+  - `Code/output/additional_experiments/larger_snn/structure_summary.json`
+
+  ---
+
   ## 📁 Repository Structure
 
   ```
@@ -262,6 +302,7 @@
   │   ├── demo_psi_hdl.py          # Burgers & Laplace equation demos (Ψ-NN)
   │   ├── demo_snn_xor.py          # SNN XOR circuit demo
   │   ├── demo_memristor.py        # Memristor device demo
+  │   ├── additional_experiments.py # Additional validation experiments
   │   ├── vteam_baseline.py        # VTEAM comparison experiment
   │   ├── cross_validation.py      # Cross-validation experiment
   │   ├── noise_robustness.py      # Noise robustness experiment
@@ -280,7 +321,10 @@
   │       ├── memristor/           # Memristor outputs
   │       ├── vteam_comparison/    # VTEAM experiment results
   │       ├── cross_validation/    # Cross-validation results
-  │       └── noise_robustness/    # Noise robustness results
+  │       ├── noise_robustness/    # Noise robustness results
+  │       └── additional_experiments/  # Ablation + SNN scalability
+  │           ├── epsilon_ablation/    # ε sensitivity analysis
+  │           └── larger_snn/          # 3×3 pixel SNN case study
   │
   ├── Psi-NN-main/                 # Original Ψ-NN codebase (baseline)
   │   ├── Panel.py                 # Ψ-NN console entry point
@@ -289,7 +333,7 @@
   │   └── Module/                  # Core Ψ-NN modules
   │
   ├── requirements.txt             # Python dependencies
-  ├── LICENSE                 	 # Apache License 2.0.
+  ├── LICENSE                 	   # Apache License 2.0
   ```
 
   ---
