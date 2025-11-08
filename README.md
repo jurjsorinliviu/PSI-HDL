@@ -632,8 +632,6 @@
     - Compression improves with scale (91% → 99.99%)
     - Physics constraints reduce violations by 69× (415 → 6)
     - Reproducible structure discovery (CV < 1%)
-  - Addresses ALL 5 major reviewer concerns for paper submission
-  - Paper readiness: 70% → 95-100% (EXCELLENT)
 
   ### Version 1.0.0 (2025-11-05)
   - Initial release accompanying IEEE Access submission
