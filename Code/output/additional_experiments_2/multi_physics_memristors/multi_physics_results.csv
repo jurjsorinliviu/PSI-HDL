@@ -1,0 +1,4 @@
+memristor_type,physics_model,total_params,clusters,compression_ratio,mae,rmse
+Oxide-based Memristor,R(x) = R_on + (R_off - R_on) × (1-x)²,3360,95,97.17261904761905,0.00014251832451092928,0.0001884750842081378
+Phase-change Memristor,"R = 1kΩ if x > 0.5, else 100kΩ (threshold)",3360,89,97.35119047619048,0.00013001764022774746,0.00017044606939108258
+Organic/Polymer Memristor,R(x) = R_on + (R_off - R_on) × exp(-5x),3360,97,97.11309523809524,0.0001943918905171319,0.00023245683340546088
