@@ -306,7 +306,7 @@
 
   ---
   
-  ### Experiment 6: Multi-Physics Memristor Validation ⭐ HIGHEST PRIORITY
+  ### Experiment 6: Multi-Physics Memristor Validation
   
   ```bash
   python Code/additional_experiments_2.py
@@ -330,7 +330,7 @@
   
   ---
   
-  ### Experiment 7: Network Size Scalability Study ⭐ HIGH PRIORITY
+  ### Experiment 7: Network Size Scalability Study
   
   ```bash
   python Code/additional_experiments_2.py
@@ -355,7 +355,7 @@
   
   ---
   
-  ### Experiment 8: Physics Loss Weight (λ_physics) Ablation ⭐ HIGH PRIORITY
+  ### Experiment 8: Physics Loss Weight (λ_physics) Ablation
   
   ```bash
   python Code/additional_experiments_2.py
@@ -378,7 +378,7 @@
   
   ---
   
-  ### Experiment 9: Multiple Random Seeds Reproducibility ⭐ MEDIUM PRIORITY
+  ### Experiment 9: Multiple Random Seeds Reproducibility
   
   ```bash
   python Code/additional_experiments_2.py
