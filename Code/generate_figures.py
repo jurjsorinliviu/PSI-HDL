@@ -86,22 +86,43 @@ class FigureGenerator:
         if not structure:
             return None
         
-        fig, ax = plt.subplots(figsize=self.fig_size)
-        ax.set_xlim(0, 10)
-        ax.set_ylim(0, 10)
+        # Calculate required dimensions based on number of layers
+        layers = structure.get('layers', [])
+        num_layers = len(layers)
+        
+        # Calculate actual content width
+        # Input box: 1.5 wide at x=1, so spans 1 to 2.5
+        # Each layer: 1.5 wide, spaced 2 units apart
+        # Output box: 1.5 wide at x=(1 + num_layers*2), so ends at (2.5 + num_layers*2)
+        content_start = 0.5  # Left margin
+        content_end = 2.5 + num_layers * 2  # End of output box
+        required_width = content_end + 0.5  # Right margin
+        x_center = (content_start + content_end) / 2
+        
+        # Calculate required height based on content
+        # Title(1) + network_diagram(1.5) + spacing(0.5) + layer_details_title(0.5) + layers(num*0.4) + activation(0.5) + margin(1)
+        required_height = 1 + 1.5 + 0.5 + 0.5 + (num_layers * 0.4) + 0.5 + 1
+        
+        # Adjust figure size to be more compact
+        fig_width = min(12, max(6, required_width * 0.7))
+        fig_height = min(8, max(4, required_height * 0.8))
+        
+        fig, ax = plt.subplots(figsize=(fig_width, fig_height))
+        ax.set_xlim(content_start, content_end + 0.5)
+        ax.set_ylim(0, required_height)
         ax.axis('off')
         
         # Title
-        ax.text(5, 9.5, f"{self.models[model_name]['description']}", 
+        y_start = required_height - 0.5
+        ax.text(x_center, y_start, f"{self.models[model_name]['description']}",
                 ha='center', va='top', fontsize=14, fontweight='bold')
         
         # Network info
-        layers = structure.get('layers', [])
         input_dim = structure.get('input_dim', 'N/A')
         output_dim = structure.get('output_dim', 'N/A')
         
         # Simple visualization
-        y_pos = 8
+        y_pos = y_start - 1.5
         
         # Input layer
         ax.add_patch(patches.Rectangle((1, y_pos-0.3), 1.5, 0.6, 
@@ -127,27 +148,27 @@ class FigureGenerator:
         ax.text(x_pos+0.75, y_pos, f'Output\n({output_dim})', ha='center', va='center', fontsize=10)
         ax.arrow(x_pos-0.3, y_pos, -0.4, 0, head_width=0.2, head_length=0.2, fc='black', ec='black')
         
-        # Layer details below
-        y_pos = 6
-        ax.text(5, y_pos, 'Layer Details:', ha='center', fontsize=12, fontweight='bold')
+        # Layer details below (more compact spacing)
+        y_pos = y_start - 3.5
+        ax.text(x_center, y_pos, 'Layer Details:', ha='center', fontsize=12, fontweight='bold')
         y_pos -= 0.5
         
         for i, layer in enumerate(layers):
             layer_type = layer.get('type', 'unknown')
             output_dim_layer = layer.get('output_dim', '?')
-            ax.text(5, y_pos, f"[{i}] {layer_type} -> {output_dim_layer}", 
+            ax.text(x_center, y_pos, f"[{i}] {layer_type} -> {output_dim_layer}",
                    ha='center', fontsize=10, family='monospace')
-            y_pos -= 0.4
+            y_pos -= 0.35
         
         # Activation function
         activation = structure.get('activation', 'unknown')
-        y_pos -= 0.3
-        ax.text(5, y_pos, f'Activation: {activation}', ha='center', fontsize=10, style='italic')
+        y_pos -= 0.2
+        ax.text(x_center, y_pos, f'Activation: {activation}', ha='center', fontsize=10, style='italic')
         
         # Save figure
         output_file = self.figures_dir / f"architecture_{model_name}.png"
-        plt.tight_layout()
-        plt.savefig(output_file, dpi=self.fig_dpi, bbox_inches='tight')
+        plt.tight_layout(pad=2.0)
+        plt.savefig(output_file, dpi=self.fig_dpi, bbox_inches='tight', pad_inches=0.5)
         plt.close()
         
         print(f"[OK] Saved: {output_file}")
