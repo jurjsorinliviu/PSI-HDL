@@ -5,6 +5,7 @@
   [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
   [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
   [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
+  [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/jurjsorinliviu/PSI-HDL?quickstart=1)
 
 Ψ-HDL is a novel framework that extends [Ψ-NN](https://github.com/ZitiLiu/Psi-NN) (Published in Nature Communications) to automatically generate hardware description language (Verilog-A) code from Physics-Informed Neural Networks (PINNs). The framework achieves **99.6% parameter reduction** while maintaining high accuracy across diverse applications: PDEs, neuromorphic circuits, and analog devices.
 
@@ -64,6 +65,48 @@
   # Install dependencies
   pip install -r requirements.txt
   ```
+
+  ### 🚀 GitHub Codespaces (Recommended for Quick Start)
+
+  The fastest way to get started is using GitHub Codespaces - a cloud-based development environment that requires no local setup.
+
+  #### One-Click Setup
+
+  [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/jurjsorinliviu/PSI-HDL?quickstart=1)
+
+  Or manually:
+  1. Click the green **"Code"** button on the repository page
+  2. Select the **"Codespaces"** tab
+  3. Click **"Create codespace on main"**
+
+  #### What's Included
+
+  The Codespace automatically sets up:
+  - ✅ Python 3.11 environment
+  - ✅ All project dependencies (PyTorch, NumPy, SciPy, etc.)
+  - ✅ VS Code extensions (Python, Jupyter, GitLens, etc.)
+  - ✅ Pre-configured output directories
+  - ✅ Jupyter kernel for notebooks
+
+  #### Running in Codespaces
+
+  Once your Codespace is ready (typically 2-3 minutes), you can immediately run:
+
+  ```bash
+  # Run Burgers demo
+  python Code/demo_psi_hdl.py --model burgers
+
+  # Run all demos
+  python Code/demo_psi_hdl.py --model all
+
+  # Run SNN XOR demo
+  python Code/demo_snn_xor.py
+
+  # Run Memristor demo
+  python Code/demo_memristor.py
+  ```
+
+  > **Note**: GitHub Codespaces runs on CPU. For GPU-accelerated training, use a local installation with CUDA-enabled GPU.
 
   ### Tested Environment
 
