@@ -1,0 +1,15 @@
+{
+  "data_csv": "C:\\Users\\jurjs\\Desktop\\PostDoc pmTUC\\Papers ideas\\PSI-HDL paper\\Code\\output\\memristor\\memristor_training_data.csv",
+  "epochs": 1500,
+  "lr": 0.001,
+  "lambda_physics": 0.1,
+  "seed": 42,
+  "device": "cuda",
+  "wall_time_s": 4.004802465438843,
+  "final": {
+    "loss": 1.1880833739041918e-07,
+    "loss_data": 1.1880375438977353e-07,
+    "loss_physics": 0.0,
+    "loss_smooth": 4.580277997157101e-12
+  }
+}

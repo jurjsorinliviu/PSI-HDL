@@ -1,0 +1,85 @@
+{
+  "model_path": "C:\\Users\\jurjs\\Desktop\\PostDoc pmTUC\\Papers ideas\\PSI-HDL paper\\Code\\output\\memristor\\memristor_pinn.pth",
+  "data_csv": "C:\\Users\\jurjs\\Desktop\\PostDoc pmTUC\\Papers ideas\\PSI-HDL paper\\Code\\output\\memristor\\memristor_training_data.csv",
+  "test_ratio": 0.2,
+  "seed": 42,
+  "device": "cuda",
+  "baseline": {
+    "mae": 0.00010812583786901087,
+    "rmse": 0.00012374242942314595
+  },
+  "thresholds": [
+    {
+      "threshold": 0.001,
+      "overall": {
+        "params": 3482.0,
+        "clusters": 567.0,
+        "compression_pct": 83.7162550258472
+      },
+      "test": {
+        "mae": 0.009569569490849972,
+        "rmse": 0.010004112496972084
+      }
+    },
+    {
+      "threshold": 0.005,
+      "overall": {
+        "params": 3482.0,
+        "clusters": 149.0,
+        "compression_pct": 95.72085008615738
+      },
+      "test": {
+        "mae": 0.6793448328971863,
+        "rmse": 0.6834156513214111
+      }
+    },
+    {
+      "threshold": 0.01,
+      "overall": {
+        "params": 3482.0,
+        "clusters": 73.0,
+        "compression_pct": 97.9035037334865
+      },
+      "test": {
+        "mae": 0.9072597622871399,
+        "rmse": 0.9075577855110168
+      }
+    },
+    {
+      "threshold": 0.02,
+      "overall": {
+        "params": 3482.0,
+        "clusters": 32.0,
+        "compression_pct": 99.0809879379667
+      },
+      "test": {
+        "mae": 0.13081033527851105,
+        "rmse": 0.13523350656032562
+      }
+    },
+    {
+      "threshold": 0.05,
+      "overall": {
+        "params": 3482.0,
+        "clusters": 15.0,
+        "compression_pct": 99.56921309592188
+      },
+      "test": {
+        "mae": 0.002864355454221368,
+        "rmse": 0.0033278705086559057
+      }
+    },
+    {
+      "threshold": 0.1,
+      "overall": {
+        "params": 3482.0,
+        "clusters": 10.0,
+        "compression_pct": 99.71280873061458
+      },
+      "test": {
+        "mae": 0.002765492768958211,
+        "rmse": 0.0032387268729507923
+      }
+    }
+  ]
+}
