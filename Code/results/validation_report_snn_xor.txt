@@ -1,0 +1,30 @@
+================================================================================
+SPICE VALIDATION REPORT: SNN_XOR
+================================================================================
+
+Model: SNN XOR Circuit
+Timestamp: 2026-01-06T13:50:59.454411
+SPICE Status: success
+PyTorch Reference: Available
+Match Status: computed
+
+Notes:
+Computed PyTorch-vs-ngspice metrics on the DC sweep grid.
+
+PyTorch vs ngspice Metrics:
+  MAE:         1.9468800836276757e-07
+  RMSE:        2.4932967921663293e-07
+  Max |err|:   5.545129775907931e-07
+  Corr:        0.9999999999993296
+
+================================================================================
+Next Steps:
+================================================================================
+
+[OK] SPICE simulation completed successfully
+
+To complete validation:
+1. Save PyTorch predictions as reference
+2. Extract SPICE numerical results
+3. Calculate accuracy metrics (MAE, RMSE)
+4. Generate comparison plots

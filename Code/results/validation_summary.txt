@@ -1,0 +1,23 @@
+================================================================================
+SPICE VALIDATION SUMMARY
+================================================================================
+
+Validation Date: 2026-01-06 13:50:59
+Models Tested: 3
+
+Model           | Status      | Notes
+--------------------------------------------------------------------------------
+burgers         | [OK] Success | Computed PyTorch-vs-ngspice metrics on t
+laplace         | [OK] Success | Computed PyTorch-vs-ngspice metrics on t
+snn_xor         | [OK] Success | Computed PyTorch-vs-ngspice metrics on t
+
+================================================================================
+OVERALL STATUS
+================================================================================
+
+[OK] ALL 3 SIMULATIONS SUCCESSFUL
+
+Next steps:
+1. Add PyTorch reference data for accuracy comparison
+2. Generate comparison plots
+3. Create figures for paper

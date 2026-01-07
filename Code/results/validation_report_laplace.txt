@@ -1,0 +1,30 @@
+================================================================================
+SPICE VALIDATION REPORT: LAPLACE
+================================================================================
+
+Model: Laplace Equation (Even Function)
+Timestamp: 2026-01-06T13:50:59.297082
+SPICE Status: success
+PyTorch Reference: Available
+Match Status: computed
+
+Notes:
+Computed PyTorch-vs-ngspice metrics on the DC sweep grid.
+
+PyTorch vs ngspice Metrics:
+  MAE:         2.838020880145101e-07
+  RMSE:        3.936048520983199e-07
+  Max |err|:   1.0556695938107596e-06
+  Corr:        0.9999999999848457
+
+================================================================================
+Next Steps:
+================================================================================
+
+[OK] SPICE simulation completed successfully
+
+To complete validation:
+1. Save PyTorch predictions as reference
+2. Extract SPICE numerical results
+3. Calculate accuracy metrics (MAE, RMSE)
+4. Generate comparison plots

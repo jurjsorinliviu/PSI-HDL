@@ -1,0 +1,10 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: Psi-NN Neural Network Test
+
+Error: unknown subckt: xdut in0 in1 out0 vdd vss psi_nn_psinn_burgers
+    in line no. 18 from file C:\Users\jurjs\Desktop\PostDoc pmTUC\Papers ideas\PSI-HDL paper\Code\output\burgers\psi_nn_PsiNN_burgers_tb.sp
+    Simulation interrupted due to error!
+

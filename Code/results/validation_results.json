@@ -1,0 +1,65 @@
+{
+  "burgers": {
+    "model": "burgers",
+    "timestamp": "2026-01-06T13:50:55.935447",
+    "spice_status": "success",
+    "pytorch_available": true,
+    "metrics": {
+      "mae": 1.7341763345740278e-07,
+      "rmse": 2.5235211803892435e-07,
+      "max_abs_err": 9.215517044192101e-07,
+      "corr": 0.9999999999996434
+    },
+    "match": "computed",
+    "notes": "Computed PyTorch-vs-ngspice metrics on the DC sweep grid.",
+    "spice_run": {
+      "output_file": "C:\\Users\\jurjs\\Desktop\\PostDoc pmTUC\\Papers ideas\\PSI-HDL paper\\Code\\results\\spice_output_burgers.txt",
+      "log_file": "C:\\Users\\jurjs\\Desktop\\PostDoc pmTUC\\Papers ideas\\PSI-HDL paper\\Code\\results\\spice_output_burgers.txt.log",
+      "wall_time_s": 7.345099,
+      "returncode": 0
+    },
+    "comparison_csv": "C:\\Users\\jurjs\\Desktop\\PostDoc pmTUC\\Papers ideas\\PSI-HDL paper\\Code\\results\\pytorch_vs_spice_burgers.csv"
+  },
+  "laplace": {
+    "model": "laplace",
+    "timestamp": "2026-01-06T13:50:59.297082",
+    "spice_status": "success",
+    "pytorch_available": true,
+    "metrics": {
+      "mae": 2.838020880145101e-07,
+      "rmse": 3.936048520983199e-07,
+      "max_abs_err": 1.0556695938107596e-06,
+      "corr": 0.9999999999848457
+    },
+    "match": "computed",
+    "notes": "Computed PyTorch-vs-ngspice metrics on the DC sweep grid.",
+    "spice_run": {
+      "output_file": "C:\\Users\\jurjs\\Desktop\\PostDoc pmTUC\\Papers ideas\\PSI-HDL paper\\Code\\results\\spice_output_laplace.txt",
+      "log_file": "C:\\Users\\jurjs\\Desktop\\PostDoc pmTUC\\Papers ideas\\PSI-HDL paper\\Code\\results\\spice_output_laplace.txt.log",
+      "wall_time_s": 3.328953,
+      "returncode": 0
+    },
+    "comparison_csv": "C:\\Users\\jurjs\\Desktop\\PostDoc pmTUC\\Papers ideas\\PSI-HDL paper\\Code\\results\\pytorch_vs_spice_laplace.csv"
+  },
+  "snn_xor": {
+    "model": "snn_xor",
+    "timestamp": "2026-01-06T13:50:59.454411",
+    "spice_status": "success",
+    "pytorch_available": true,
+    "metrics": {
+      "mae": 1.9468800836276757e-07,
+      "rmse": 2.4932967921663293e-07,
+      "max_abs_err": 5.545129775907931e-07,
+      "corr": 0.9999999999993296
+    },
+    "match": "computed",
+    "notes": "Computed PyTorch-vs-ngspice metrics on the DC sweep grid.",
+    "spice_run": {
+      "output_file": "C:\\Users\\jurjs\\Desktop\\PostDoc pmTUC\\Papers ideas\\PSI-HDL paper\\Code\\results\\spice_output_snn_xor.txt",
+      "log_file": "C:\\Users\\jurjs\\Desktop\\PostDoc pmTUC\\Papers ideas\\PSI-HDL paper\\Code\\results\\spice_output_snn_xor.txt.log",
+      "wall_time_s": 0.135124,
+      "returncode": 0
+    },
+    "comparison_csv": "C:\\Users\\jurjs\\Desktop\\PostDoc pmTUC\\Papers ideas\\PSI-HDL paper\\Code\\results\\pytorch_vs_spice_snn_xor.csv"
+  }
+}

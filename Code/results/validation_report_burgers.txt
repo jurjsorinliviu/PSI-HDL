@@ -1,0 +1,30 @@
+================================================================================
+SPICE VALIDATION REPORT: BURGERS
+================================================================================
+
+Model: Burgers Equation (Odd Function)
+Timestamp: 2026-01-06T13:50:55.935447
+SPICE Status: success
+PyTorch Reference: Available
+Match Status: computed
+
+Notes:
+Computed PyTorch-vs-ngspice metrics on the DC sweep grid.
+
+PyTorch vs ngspice Metrics:
+  MAE:         1.7341763345740278e-07
+  RMSE:        2.5235211803892435e-07
+  Max |err|:   9.215517044192101e-07
+  Corr:        0.9999999999996434
+
+================================================================================
+Next Steps:
+================================================================================
+
+[OK] SPICE simulation completed successfully
+
+To complete validation:
+1. Save PyTorch predictions as reference
+2. Extract SPICE numerical results
+3. Calculate accuracy metrics (MAE, RMSE)
+4. Generate comparison plots
