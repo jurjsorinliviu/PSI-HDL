@@ -639,8 +639,9 @@ The revision adds additional quantitative artifacts used to address reviewer com
 
 ### Ψ-HDL (This Work)
 
-  - **Paper**: *Ψ-HDL: Physics Structured-Informed Neural Networks for Hardware Description Language Generation*
-  - **Journal**: Submitted to IEEE Access
+  - **Paper**: *[Ψ-HDL: Physics Structured-Informed Neural Networks for Hardware Description Language Generation](https://doi.org/10.1109/ACCESS.2026.3662103)*
+  - **Journal**: IEEE Access (2026)
+  - **Author**: Jurj, Sorin Liviu
 
 ---
 
@@ -649,23 +650,17 @@ The revision adds additional quantitative artifacts used to address reviewer com
   If you use this code in your research, please cite:
 
 ```bibtex
-  @article{Jurj2025PSI-HDL,
-    title={Ψ-HDL: Physics Structured-Informed Neural Networks for Hardware Description Language Generation},
-    author={Sorin Liviu Jurj},
-    journal={IEEE Access},
-    year={2025},
-    note={Submitted}
-  }
-  
-  @article{liu2025psi-nn,
-    title={Automatic network structure discovery of physics informed neural networks via knowledge distillation},
-    author={Liu, Ziti and Liu, Yang and Yan, Xunshi and Liu, Wen and Nie, Han and Guo, Shuaiqi and Zhang, Chen-an},
-    journal={Nature Communications},
-    volume={16},
-    pages={9558},
-    year={2025},
-    doi={10.1038/s41467-025-64624-3}
-  }
+@ARTICLE{11373324,
+  author={Jurj, Sorin Liviu},
+  journal={IEEE Access}, 
+  title={Ψ-HDL: Physics Structured-Informed Neural Networks for Hardware Description Language Generation}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={1-1},
+  keywords={Mathematical models;Adaptation models;Hardware design languages;Integrated circuit modeling;Neural networks;Physics;Memristors;Data models;Codes;Training;Physics Structured-Informed Neural Networks;Physics-Informed Neural Networks;Knowledge Distillation;Model Compression;Compact Device Modeling;Verilog-A;SPICE Modeling;Electronic Design Automation;Memristor Modeling;Adaptive Hardware},
+  doi={10.1109/ACCESS.2026.3662103}}
+
 ```
 
 ---
