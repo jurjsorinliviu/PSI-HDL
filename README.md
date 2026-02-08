@@ -1,14 +1,15 @@
 # Ψ-HDL: Physics Structured-Informed Neural Networks for Hardware Description Language Generation
 
-> 🔬 **Accepted in the IEEE Access journal** | 🚀 **Extends Ψ-NN to HDL Generation** | ⚡ **99.6% Parameter Reduction**
+> 🔬 **Published in the IEEE Access journal** | 🚀 **Extends Ψ-NN to HDL Generation** | ⚡ **99.6% Parameter Reduction**
 
   [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
   [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
   [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
   [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/jurjsorinliviu/PSI-HDL?quickstart=1)
 
-Ψ-HDL is a novel framework that extends [Ψ-NN](https://github.com/ZitiLiu/Psi-NN) (Published in Nature Communications) to automatically generate hardware description language (Verilog-A) code from Physics-Informed Neural Networks (PINNs). The framework achieves **up to 99.9% parameter reduction** (case-dependent) while maintaining strong accuracy across diverse applications: PDEs, neuromorphic circuits, and analog devices.
+**Ψ-HDL** is a novel framework that extends [Ψ-NN](https://github.com/ZitiLiu/Psi-NN) ([published in Nature Communications](https://www.nature.com/articles/s41467-025-64624-3)) to automatically generate hardware description language (Verilog-A) code from Physics-Informed Neural Networks (PINNs). The framework achieves **up to 99.9% parameter reduction** (case-dependent) while maintaining strong accuracy across diverse applications: PDEs, neuromorphic circuits, and analog devices.
 
+**Citation**: S. L. Jurj, "Ψ-HDL: Physics Structured-Informed Neural Networks for Hardware Description Language Generation," in IEEE Access, [doi: 10.1109/ACCESS.2026.3662103](https://doi.org/10.1109/ACCESS.2026.3662103).
 ---
 
 ## 🎯 Key Features
