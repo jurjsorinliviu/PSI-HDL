@@ -1,4 +1,4 @@
-# Ψ-HDL: Physics Structured-Informed Neural Networks for Hardware Description Language Generation
+# Ψ-HDL: Physics Structure-Informed Neural Networks for Hardware Description Language Generation
 
 > 🔬 **Published in the IEEE Access journal** | 🚀 **Extends Ψ-NN to HDL Generation** | ⚡ **99.6% Parameter Reduction**
 
@@ -9,7 +9,7 @@
 
 **Ψ-HDL** is a novel framework that extends [Ψ-NN](https://github.com/ZitiLiu/Psi-NN) ([published in Nature Communications](https://www.nature.com/articles/s41467-025-64624-3)) to automatically generate hardware description language (Verilog-A) code from Physics-Informed Neural Networks (PINNs). The framework achieves **up to 99.9% parameter reduction** (case-dependent) while maintaining strong accuracy across diverse applications: PDEs, neuromorphic circuits, and analog devices.
 
-**Citation**: S. L. Jurj, "Ψ-HDL: Physics Structured-Informed Neural Networks for Hardware Description Language Generation," in IEEE Access, [doi: 10.1109/ACCESS.2026.3662103](https://doi.org/10.1109/ACCESS.2026.3662103).
+**Citation**: S. L. Jurj, "Ψ-HDL: Physics Structure-Informed Neural Networks for Hardware Description Language Generation," in IEEE Access, [doi: 10.1109/ACCESS.2026.3662103](https://doi.org/10.1109/ACCESS.2026.3662103).
 
 ---
 
@@ -639,7 +639,7 @@ The revision adds additional quantitative artifacts used to address reviewer com
 
 ### Ψ-HDL (This Work)
 
-  - **Paper**: *[Ψ-HDL: Physics Structured-Informed Neural Networks for Hardware Description Language Generation](https://doi.org/10.1109/ACCESS.2026.3662103)*
+  - **Paper**: *[Ψ-HDL: Physics Structure-Informed Neural Networks for Hardware Description Language Generation](https://doi.org/10.1109/ACCESS.2026.3662103)*
   - **Journal**: IEEE Access (2026)
   - **Author**: Jurj, Sorin Liviu
 
@@ -653,7 +653,7 @@ The revision adds additional quantitative artifacts used to address reviewer com
 @ARTICLE{11373324,
   author={Jurj, Sorin Liviu},
   journal={IEEE Access}, 
-  title={Ψ-HDL: Physics Structured-Informed Neural Networks for Hardware Description Language Generation}, 
+  title={Ψ-HDL: Physics Structure-Informed Neural Networks for Hardware Description Language Generation}, 
   year={2026},
   volume={},
   number={},
