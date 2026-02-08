@@ -10,6 +10,7 @@
 **Ψ-HDL** is a novel framework that extends [Ψ-NN](https://github.com/ZitiLiu/Psi-NN) ([published in Nature Communications](https://www.nature.com/articles/s41467-025-64624-3)) to automatically generate hardware description language (Verilog-A) code from Physics-Informed Neural Networks (PINNs). The framework achieves **up to 99.9% parameter reduction** (case-dependent) while maintaining strong accuracy across diverse applications: PDEs, neuromorphic circuits, and analog devices.
 
 **Citation**: S. L. Jurj, "Ψ-HDL: Physics Structured-Informed Neural Networks for Hardware Description Language Generation," in IEEE Access, [doi: 10.1109/ACCESS.2026.3662103](https://doi.org/10.1109/ACCESS.2026.3662103).
+
 ---
 
 ## 🎯 Key Features
