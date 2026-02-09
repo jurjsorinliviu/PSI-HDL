@@ -1,13 +1,13 @@
 # Ψ-HDL: Physics Structure-Informed Neural Networks for Hardware Description Language Generation
 
-> 🔬 **Published in the IEEE Access journal** | 🚀 **Extends Ψ-NN to HDL Generation** | ⚡ **99.6% Parameter Reduction**
+> 🔬 **Published in the IEEE Access journal** | 🚀 **Extends Ψ-NN to HDL Generation** | ⚡ **Up to 99.99% Parameter Reduction (case-dependent)**
 
   [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
   [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
   [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
   [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/jurjsorinliviu/PSI-HDL?quickstart=1)
 
-**Ψ-HDL** is a novel framework that extends [Ψ-NN](https://github.com/ZitiLiu/Psi-NN) ([published in Nature Communications](https://www.nature.com/articles/s41467-025-64624-3)) to automatically generate hardware description language (Verilog-A) code from Physics-Informed Neural Networks (PINNs). The framework achieves **up to 99.9% parameter reduction** (case-dependent) while maintaining strong accuracy across diverse applications: PDEs, neuromorphic circuits, and analog devices.
+**Ψ-HDL** is a novel framework that extends [Ψ-NN](https://github.com/ZitiLiu/Psi-NN) ([published in Nature Communications](https://www.nature.com/articles/s41467-025-64624-3)) to automatically generate Verilog-A behavioral compact models (HDL) from Physics-Informed Neural Networks (PINNs). The framework achieves **up to 99.9% parameter reduction** (case-dependent) while maintaining strong accuracy across diverse applications: PDEs, neuromorphic circuits, and analog devices.
 
 **Citation**: S. L. Jurj, "Ψ-HDL: Physics Structure-Informed Neural Networks for Hardware Description Language Generation," in IEEE Access, [doi: 10.1109/ACCESS.2026.3662103](https://doi.org/10.1109/ACCESS.2026.3662103).
 
@@ -15,11 +15,11 @@
 
 ## 🎯 Key Features
 
-  - **Automatic HDL Generation**: Transform trained PINNs into synthesizable Verilog-A code
-  - **Extreme Compression**: Up to 99.99% parameter reduction (502,000 → 33 parameters for 500-neuron network)
+  - **Automatic HDL Generation**: Transform trained PINNs into Verilog-A behavioral compact models for circuit simulation
+  - **Extreme Compression**: Up to 99.99% parameter reduction (case-dependent) (502,000 → 33 parameters for 500-neuron network)
   - **Multi-Domain Support**: Continuous PDEs, discrete circuits, analog device characterization
   - **Comprehensive Validation**: 10 experiments proving physics-dependency, scalability, and robustness
-  - **Physics-Informed Structure**: Discovers different architectures for different device physics (89-97 clusters)
+  - **Physics-Informed Structure**: Discovers different weight-sharing structures for different device physics (e.g., 89–97 weight clusters in the multi-physics memristor study)
   - **Scalable**: Compression efficiency improves with network size (91% → 99.99% for 20-500 neurons)
   - **Robust Generalization**: Consistent prediction across 5 random seeds (CV < 1% for compression)
   - **Noise Tolerance**: Graceful degradation (16% at SNR = 6.5 dB)
@@ -394,6 +394,7 @@ The revision adds additional quantitative artifacts used to address reviewer com
     - **Oxide-based**: Polynomial R(x) = R_on + (R_off - R_on) × (1-x)² → 95 clusters
     - **Phase-change**: Threshold R = 1kΩ if x > 0.5 else 100kΩ → 89 clusters
     - **Organic**: Exponential R(x) = R_on + (R_off - R_on) × exp(-5x) → 97 clusters
+    - (Here, ‘clusters’ refers to hierarchical clustering groups used for weight tying / parameter sharing.)
   - **Key finding**: Different physics → Different cluster counts (89 vs 95 vs 97)
   - All achieve comparable accuracy (MAE ≈ 1-2×10⁻⁴ A) with 97.1-97.4% compression
   - Validates physics-dependent structure discovery
@@ -499,7 +500,7 @@ The revision adds additional quantitative artifacts used to address reviewer com
 
   - **Ψ-HDL is 36× smaller** than vanilla NN while maintaining interpretability
   - Achieves best balance: good accuracy + small size + interpretable structure
-  - Outperforms traditional curve-fitting (polynomial)
+  - Provides a different trade-off than curve-fitting baselines (polynomial/LUT): Ψ-HDL prioritizes compactness + interpretability + deployable behavioral structure, not minimum MAE on clean synthetic data.
   - More adaptive than fixed-form models (VTEAM)
 
   **Figures**:
@@ -575,7 +576,7 @@ The revision adds additional quantitative artifacts used to address reviewer com
      ↓ (Compress 3482 → 12 parameters)
   Stage 3: Structure Extraction + HDL Generation
      ↓ (Hierarchical clustering → Verilog-A)
-  OUTPUT: Synthesizable HDL Code
+  OUTPUT: Simulator-ready Verilog-A / SPICE behavioral models
 ```
 
 ### Key Algorithms
@@ -621,11 +622,11 @@ The revision adds additional quantitative artifacts used to address reviewer com
 
 ### SPICE Simulation Overhead
 
-| **Model Type**    | **Simulation Time**     | **Accuracy (vs PINN)** |
-| ----------------- | ----------------------- | ---------------------- |
-| Ψ-HDL (Verilog-A) | 0.5s                    | 99.8%                  |
-| LUT (1000 points) | 2.3s                    | 98.5%                  |
-| Original PINN     | N/A (not synthesizable) | 100% (baseline)        |
+| **Model Type**    | **Simulation Time**                     | **Agreement vs PyTorch (DC sweep)** |
+| ----------------- | --------------------------------------- | ----------------------------------- |
+| Ψ-HDL (Verilog-A) | 0.5s                                    | 99.8%                               |
+| LUT (1000 points) | 2.3s                                    | 98.5%                               |
+| Original PINN     | N/A (not directly simulatable in SPICE) | 100% (baseline)                     |
 
 ---
 
