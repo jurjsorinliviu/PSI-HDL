@@ -682,7 +682,7 @@ The revision adds additional quantitative artifacts used to address reviewer com
   - Performance optimizations
   - Extended HDL backends (VHDL-AMS, SystemVerilog-AMS)
   - GUI for Ψ-HDL pipeline
-  - Hardware synthesis benchmarks (FPGA/ASIC)
+  - Circuit-simulation benchmarks (Spectre/HSPICE/ngspice) and analog hardware cost estimates (area/power)
 
 ---
 
