@@ -9,7 +9,7 @@
 
 **Ψ-HDL** is a novel framework that extends [Ψ-NN](https://github.com/ZitiLiu/Psi-NN) ([published in Nature Communications](https://www.nature.com/articles/s41467-025-64624-3)) to automatically generate Verilog-A behavioral compact models (HDL) from Physics-Informed Neural Networks (PINNs). The framework achieves **up to 99.9% parameter reduction** (case-dependent) while maintaining strong accuracy across diverse applications: PDEs, neuromorphic circuits, and analog devices.
 
-**Citation**: S. L. Jurj, "Ψ-HDL: Physics Structure-Informed Neural Networks for Hardware Description Language Generation," in IEEE Access, [doi: 10.1109/ACCESS.2026.3662103](https://doi.org/10.1109/ACCESS.2026.3662103).
+**Citation**: S. L. Jurj, "Ψ-HDL: Physics Structure-Informed Neural Networks for Hardware Description Language Generation," in IEEE Access, vol. 14, pp. 20229-20259, [doi: 10.1109/ACCESS.2026.3662103](https://doi.org/10.1109/ACCESS.2026.3662103).
 
 ---
 
@@ -656,10 +656,10 @@ The revision adds additional quantitative artifacts used to address reviewer com
   journal={IEEE Access}, 
   title={Ψ-HDL: Physics Structure-Informed Neural Networks for Hardware Description Language Generation}, 
   year={2026},
-  volume={},
+  volume={14},
   number={},
-  pages={1-1},
-  keywords={Mathematical models;Adaptation models;Hardware design languages;Integrated circuit modeling;Neural networks;Physics;Memristors;Data models;Codes;Training;Physics Structured-Informed Neural Networks;Physics-Informed Neural Networks;Knowledge Distillation;Model Compression;Compact Device Modeling;Verilog-A;SPICE Modeling;Electronic Design Automation;Memristor Modeling;Adaptive Hardware},
+  pages={20229-20259},
+  keywords={Mathematical models;Adaptation models;Hardware design languages;Integrated circuit modeling;Neural networks;Physics;Memristors;Data models;Codes;Training;Physics structure-informed neural networks;physics-informed neural networks;knowledge distillation;model compression;compact device modeling;verilog-A;SPICE modeling;electronic design automation;memristor modeling;adaptive hardware},
   doi={10.1109/ACCESS.2026.3662103}}
 
 ```
